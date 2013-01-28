@@ -2,18 +2,18 @@
 
 ## Contents
 
-1. [Introduction](#introduction)
-2. [Development Guidelines](#development-guidelines)
-	1. [Make Commits Meaningful](#make-commits-meaningful)
-	2. [Dont Commit to Master](#dont-commit-to-master)
-	3. [Run all tests before pushing](#run-all-tests-before-pushing)
-3. [Contributors](#contributors)
+1. [Introduction](#-introduction)
+2. [Development Guidelines](#-development-guidelines)
+	1. [Make Commits Meaningful](#-make-commits-meaningful)
+	2. [Dont Commit to Master](#-dont-commit-to-master)
+	3. [Run all tests before pushing](#-run-all-tests-before-pushing)
+3. [Contributors](#-contributors)
 
-## <a id="introduction"></a> Introduction
+## <a name="introduction"></a> Introduction
 
 Beta version of the DFID Aid Information Platform
 
-## <a id="development-guidelines"></a> Development Guidelines
+## <a name="development-guidelines"></a> Development Guidelines
 
 ### <a id="make-commits-meaningful"></a> Make commits meaningful
 
