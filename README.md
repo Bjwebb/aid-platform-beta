@@ -3,15 +3,24 @@
 ## Contents
 
 1. [Introduction](#-introduction)
-2. [Development Guidelines](#-development-guidelines)
+2. [Project Management](#-project-management)
+3. [Development Guidelines](#-development-guidelines)
 	1. [Make Commits Meaningful](#-make-commits-meaningful)
 	2. [Dont Commit to Master](#-dont-commit-to-master)
 	3. [Run all tests before pushing](#-run-all-tests-before-pushing)
-3. [Contributors](#-contributors)
+4. [Contributors](#-contributors)
 
 ## <a name="introduction"></a> Introduction
 
 Beta version of the DFID Aid Information Platform
+
+## <a name="project-management"></a> Project Management
+
+The project uses a minimum set of tools to allow us to manage the project.  If you need access to any of these talk to James, Alison or John
+
+- Trello (Product Backlog and Planning) - [Aid Platform Beta Board](https://trello.com/board/aid-platform-beta/510679a1af797fce7b001dd4)
+- HipChat (Team Communication)
+- Github (Version Control, Issues, Pull Requests) - [Aid Platform Beta](https://github.com/DFID/aid-platform-beta)
 
 ## <a name="development-guidelines"></a> Development Guidelines
 
