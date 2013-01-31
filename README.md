@@ -1,12 +1,16 @@
 # Aid Platform Beta
 
+> @Rchards -> @johnthegeo @dfid_uk @kouphax @alisoncoote I have great hopes that it will help change the debate on our aid budget - people will see impact
+
 ## Contents
 
 1. [Introduction](#-introduction)
 2. [Project Management](#-project-management)
-	1. [Key Dates](#-trello-boards)
-	2. [Expected Holidays](#-expected-holidays)
-	3. [Trello Boards](#-trello-boards)
+	1. [Sprint Structure](#-sprint-structure)
+	2. [Sprint Goals](#-sprint-goals)
+	3. [Key Dates](#-trello-boards)
+	4. [Expected Holidays](#-expected-holidays)
+	5. [Trello Boards](#-trello-boards)
 3. [Architecture](#-architecture)
 4. [Development Guidelines](#-development-guidelines)
 	1. [Make Commits Meaningful](#-make-commits-meaningful)
@@ -27,9 +31,33 @@ The project uses a minimum set of tools to allow us to manage the project.  If y
 - Github (Version Control, Issues, Pull Requests) - [Aid Platform Beta](https://github.com/DFID/aid-platform-beta)
 - Planning Poker - For sprint planning - [planningpoker.com](http://kouphax.planningpoker.com/)
 
+### <a name="sprint-structure"></a> Sprint Structure
+
+- 2 day inception (31st Jan -> 1st Feb)
+- 2 week sprints 
+- First Sprint - (4th Feb -> 15th Feb)
+- Final Sprint - (18th Mar -> 29th Mar)
+
+### <a name="sprint-goals"></a> Sprint Goals
+
+__Key Goals__
+
+- Move away from Operational Plan
+- Bring in Global and Regional Project Navigation
+- Build out public API
+- More...
+
 ### <a name="key-dates"></a> Key Dates
 
+- Potential user testing after 2nd Sprint.
+- Potential user testing after last Sprint.
+- Potential Penetration Testing at start of last Sprint.
+
 ### <a name="expected-holidays"></a> Expected Holidays
+
+- Clare Maclennan - 3 Weeks (25th Feb -> 15th March)
+- James Hughes - 3 Days (18th March -> 20th March)
+- John Adam - 1 week (18th March -> 22nd March)
 
 ### <a name="trello-boards"></a> Trello Boards
 
@@ -109,5 +137,7 @@ Don't rely on the CI server to make sure you haven't broken anything.  Be sure t
 ## <a id="contributors"></a> Contributors
 
 - John Adams (j-adams@dfid.gov.uk)
+- Clare Maclennan (C-MacLennan@dfid.gov.uk)
+- Virginia McLachlan (v-mclachlan@dfid.gov.uk)
 - James Hughes (james@yobriefca.se)
 - Kyle Davidson (k.davidson@kainos.com)
