@@ -4,9 +4,9 @@
 
 1. [Introduction](#-introduction)
 2. [Project Management](#-project-management)
-	1. [Key Dates](#~trello-boards)
-	2. [Expected Holidays](#~expected-holidays)
-	3. [Trello Boards](#~trello-boards)
+	1. [Key Dates](#-trello-boards)
+	2. [Expected Holidays](#-expected-holidays)
+	3. [Trello Boards](#-trello-boards)
 3. [Architecture](#-architecture)
 4. [Development Guidelines](#-development-guidelines)
 	1. [Make Commits Meaningful](#-make-commits-meaningful)
