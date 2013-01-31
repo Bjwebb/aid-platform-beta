@@ -88,6 +88,11 @@ The sprint boards will be used by the team to ensure they are on track to delive
 - Accepted - Items that have been accepted by the Product Owner - they will stay here until the end of the sprint and moved during sprint review.  During sprint review these hould be moved to the __Live__ list in the Product Backlog to give us an overall view of the current state of the system
 - Rejected - Items that have been rejected by the Product Owner (incomplete, broken etc.).  These should be reviewed an moved back to the Product Backlog board (Either Sprint Candidates or Ready).
 
+Because we will be generating printed cards with this board cards in this board should, as much as possible, take the form described below,
+
+<img src="http://yobriefca.se/images/blog/cardmocks.png" style="width:100%"/>
+
+See [this blog post](http://yobriefca.se/blog/2012/12/28/trello-cards-materialising-trello-boards/) for an explanation about this.
 
 __[Sprint Retrospective](https://trello.com/board/sprint-retrospective-1/5107b4ee7001c21621003df4)__
 
