@@ -130,6 +130,8 @@ Keep the commit tree tidy and meaningful.  GDS have a a [great style guide for G
 
 Use short lived feature branches to work in.  When something is ready to be merged into master [open a pull request](https://github.com/DFID/aid-platform-beta/pull/new/master) vis Github to allow the rest of the team to quickly review it before it goes into master.
 
+<img src="https://raw.github.com/DFID/aid-platform-beta/master/lib/images/devflow.png?login=kouphax&token=32026e6e5f36038445c0164d0edcba1d" style="width:100%"/>
+
 ### <a id="run-all-tests-before-pushing"></a> Run all the tests before pushing
 
 Don't rely on the CI server to make sure you haven't broken anything.  Be sure to run tests prior to committing and pushing code to Github.
