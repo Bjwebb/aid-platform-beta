@@ -25,6 +25,7 @@ The project uses a minimum set of tools to allow us to manage the project.  If y
 - Trello (Product Backlog and Planning) - [Aid Platform Beta Board](https://trello.com/dfid)
 - HipChat (Team Communication) (__PENDING__)
 - Github (Version Control, Issues, Pull Requests) - [Aid Platform Beta](https://github.com/DFID/aid-platform-beta)
+- Planning Poker - For sprint planning - [planningpoker.com](http://kouphax.planningpoker.com/)
 
 ### <a name="key-dates"></a> Key Dates
 
@@ -44,7 +45,7 @@ The product backlog represents all the items to potentially include in the Beta 
 
 - Ideas - Coarse grained items to bring into the beta.  Not necessarily fully understood or ready yet but roughly prioritized
 - Ready - Features/Chores that are defined enough (Definition of Ready) that can be worked on by the Dev Team
-- Sprint Candidates - Items in here will be used for sprint planning - should be __prioritized__ as best as possible
+- Sprint Candidates - Items in here will be used for sprint planning - should be __prioritized__ as best as possible.  Sprint Planning will be done through [PlanningPoker](http://kouphax.planningpoker.com/)
 - Live - Items that have been successfully delivered during a sprint.
 
 The __Sprint Candidates__ list will be used as a basis for sprint planning.  Items from this list can be moved into the current sprints initial list once estimated.
