@@ -5,6 +5,7 @@
 ## Contents
 
 1. [Introduction](#-introduction)
+	1. [Useful Links](#-useful-links)
 2. [Project Management](#-project-management)
 	1. [Sprint Structure](#-sprint-structure)
 	2. [Sprint Goals](#-sprint-goals)
@@ -21,6 +22,11 @@
 ## <a name="introduction"></a> Introduction
 
 Beta version of the DFID Aid Information Platform
+
+### <a name="useful-links"></a> Useful Links
+
+- [IATI Standard](http://iatistandard.org) - provides detail on the IATI XML Standard and Validation rules and notes.
+- [IATI Registry](http://iatiregistry.org) - provides searchable access ot all the published IATI files available.
 
 ## <a name="project-management"></a> Project Management
 
@@ -72,11 +78,15 @@ __[Product Backlog](https://trello.com/board/product-backlog/5107b28fe4ed2cd07b0
 The product backlog represents all the items to potentially include in the Beta release.  It uses the following lists,
 
 - Ideas - Coarse grained items to bring into the beta.  Not necessarily fully understood or ready yet but roughly prioritized
+- In Progress - Should be called something else - simply a scratchpad for working on fleshing out items form the __Ideas__ list into deliverable features.
+- Ready Epics - These are epics that have been fleshed out and have features representing the epic in either Ready/Delivery/Live.  Each epic should have a list of realted features (use the `#CARD_NO` notation to allow easy linking to them)
 - Ready - Features/Chores that are defined enough (Definition of Ready) that can be worked on by the Dev Team
 - Sprint Candidates - Items in here will be used for sprint planning - should be __prioritized__ as best as possible.  Sprint Planning will be done through [PlanningPoker](http://kouphax.planningpoker.com/)
 - Live - Items that have been successfully delivered during a sprint.
 
 The __Sprint Candidates__ list will be used as a basis for sprint planning.  Items from this list can be moved into the current sprints initial list once estimated.
+
+> There is currently an issue in trello that removes the labels from cards when moving cards between boards.  We can do this manually for now.
 
 __[Sprint](https://trello.com/board/sprint-1/5107b4bee77a73bb56009a41)__
 
