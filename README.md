@@ -64,6 +64,8 @@ __Key Goals__
 - Clare Maclennan - 3 Weeks (25th Feb -> 15th March)
 - James Hughes - 3 Days (18th March -> 20th March)
 - John Adam - 1 week (18th March -> 22nd March)
+- Kyle Davidson - 1 Day (15th February)
+- Alison Coote - 2 Days (21st March - 22nd March)
 
 ### <a name="trello-boards"></a> Trello Boards
 
