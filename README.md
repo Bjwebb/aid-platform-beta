@@ -42,7 +42,10 @@ The project uses a minimum set of tools to allow us to manage the project.  If y
 - 2 day inception (31st Jan -> 1st Feb)
 - 2 week sprints 
 - First Sprint - (4th Feb -> 15th Feb)
-- Final Sprint - (18th Mar -> 29th Mar)
+- Second Sprint - (18th Feb -> 1st Mar)
+- Third Sprint - (4th Mar - > 15th Mar) 
+- Final Sprint - (18th Mar -> 8th Apr)
+- Prep for Beta - (9th Apr -> 26th Apr)
 
 ### <a name="sprint-goals"></a> Sprint Goals
 
