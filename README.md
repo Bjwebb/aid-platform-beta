@@ -8,10 +8,11 @@
 	1. [Useful Links](#-useful-links)
 2. [Project Management](#-project-management)
 	1. [Sprint Structure](#-sprint-structure)
-	2. [Sprint Goals](#-sprint-goals)
-	3. [Key Dates](#-trello-boards)
-	4. [Expected Holidays](#-expected-holidays)
-	5. [Trello Boards](#-trello-boards)
+	2. [Definition of done](#definition-of-done)
+	3. [Sprint Goals](#-sprint-goals)
+	4. [Key Dates](#-trello-boards)
+	5. [Expected Holidays](#-expected-holidays)
+	6. [Trello Boards](#-trello-boards)
 3. [Architecture](#-architecture)
 4. [Development Guidelines](#-development-guidelines)
 	1. [Make Commits Meaningful](#-make-commits-meaningful)
@@ -46,6 +47,14 @@ The project uses a minimum set of tools to allow us to manage the project.  If y
 - Third Sprint - (4th Mar - > 15th Mar) 
 - Final Sprint - (18th Mar -> 8th Apr)
 - Prep for Beta - (9th Apr -> 26th Apr)
+
+### <a name="definition-of-done"></a> Definition of Done
+
+- Code committed with acceptable explanation of purpose and changes (inc. Tests)
+- Pull Request opened, reviewed and accepted by Team, merged by TDA
+    - CI Server build and passes all tests
+- Trello acceptance criteria all met for story specific stuff
+- Accepted by PO/Relevant Stakeholder
 
 ### <a name="sprint-goals"></a> Sprint Goals
 
