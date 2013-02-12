@@ -18,7 +18,9 @@
 	1. [Make Commits Meaningful](#-make-commits-meaningful)
 	2. [Dont Commit to Master](#-dont-commit-to-master)
 	3. [Run all tests before pushing](#-run-all-tests-before-pushing)
-5. [Contributors](#-contributors)
+5. [Setup Notes](#-setup-notes)
+	1. [Environment Variables](#-necessary-environment-variables)
+6. [Contributors](#-contributors)
 
 ## <a name="introduction"></a> Introduction
 
@@ -164,6 +166,20 @@ Use short lived feature branches to work in.  When something is ready to be merg
 ### <a id="run-all-tests-before-pushing"></a> Run all the tests before pushing
 
 Don't rely on the CI server to make sure you haven't broken anything.  Be sure to run tests prior to committing and pushing code to Github.
+
+## <a id="setup-notes"></a> Setup Notes
+
+### <a id="necessary-environment-variables"></a> Environment Variables
+
+Currently to make the application work end to end the varioous components use a number of environment variables that can be configured across the board.  These typically will point to a subfolder in the `aid-platform-build` submodule/repo within the project
+
+- `DFID_DATA_PATH` - Points to the Ne4j Embedded DB path
+- `DFID_ELASTICSEARCH_PATH` - Points to the ElasticSearch embedded DB path
+
+These can be setup in you shells startup script eg.
+
+	export DFID_DATA_PATH=/dfid/aid-platform-beta/data/iati-xml
+	export DFID_ELASTICSEARCH_PATH=/dfid/aid-platform-beta/data/elasticsearch
 
 ## <a id="contributors"></a> Contributors
 
