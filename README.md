@@ -8,10 +8,11 @@
 	1. [Useful Links](#-useful-links)
 2. [Project Management](#-project-management)
 	1. [Sprint Structure](#-sprint-structure)
-	2. [Sprint Goals](#-sprint-goals)
-	3. [Key Dates](#-trello-boards)
-	4. [Expected Holidays](#-expected-holidays)
-	5. [Trello Boards](#-trello-boards)
+	2. [Definition of done](#definition-of-done)
+	3. [Sprint Goals](#-sprint-goals)
+	4. [Key Dates](#-trello-boards)
+	5. [Expected Holidays](#-expected-holidays)
+	6. [Trello Boards](#-trello-boards)
 3. [Architecture](#-architecture)
 4. [Development Guidelines](#-development-guidelines)
 	1. [Make Commits Meaningful](#-make-commits-meaningful)
@@ -46,6 +47,14 @@ The project uses a minimum set of tools to allow us to manage the project.  If y
 - Third Sprint - (4th Mar - > 15th Mar) 
 - Final Sprint - (18th Mar -> 8th Apr)
 - Prep for Beta - (9th Apr -> 26th Apr)
+
+### <a name="definition-of-done"></a> Definition of Done
+
+- Code committed with acceptable explanation of purpose and changes (inc. Tests)
+- Pull Request opened, reviewed and accepted by Team, merged by TDA
+    - CI Server build and passes all tests
+- Trello acceptance criteria all met for story specific stuff
+- Accepted by PO/Relevant Stakeholder
 
 ### <a name="sprint-goals"></a> Sprint Goals
 
@@ -134,11 +143,11 @@ This is the current architectural vision
 
 The technologies suggested are only theoretical and I expect them to change as and when the components evolve.  For now bare minimum spikes through the system are essential to draw out requirements.
 
-- __Loader Admin__ - The alpha provided configuration through a simple file.  The loader admin will be a more user friendly approach to defining what XML files should be loaded as well as providing an area to add "annotations" to the IATI data.
+- __CMS__ - The alpha provided configuration through a simple file.  The loader admin will be a more user friendly approach to defining what XML files should be loaded as well as providing an area to add "annotations" to the IATI data.
 - __Loader__ - The loader pulls in the IATI XML data and loads it into the data stores of the API and Searcher
 - __Searcher__ - Provides faceted, fuzzy searching of loaded IATI data.  This is only available to the Platform and not through the API.  The rationale for doing this is that it is very much geared towards the aid-platform format rather than arbitrary API calls.  We can consider exposing this externally as we go on.  Potentially built on top of ElasticSearch.
 - __API__ - IATI Data API built against the working draft of the IATI API Standards.  Unlike the beta this wont be tailored specifically to DFIDs assumptions of the data shape.  Extra work will need to be carried out by the aid platform itself
-- __Platform__ - The aid platform will consume the API and generate a static site that can be hosted on any provider.
+- __Site__ - The aid platform will consume the API and generate a static site that can be hosted on any provider.
 
 ## <a name="development-guidelines"></a> Development Guidelines
 
