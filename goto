@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [[ ! ("$#" == 2) ]]; then
+ echo "goto <(cms|site|api|ci|search)> <keyfile>"
+ exit 1
+fi
+
+case $1 in
+"cms"|"ci")
+  ssh ubuntu@ec2-46-137-43-29.eu-west-1.compute.amazonaws.com -i $2
+  ;;
+"api"|"site")
+  ssh ubuntu@2-46-137-129-165.eu-west-1.compute.amazonaws.com -i $2
+  ;;
+*)
+  echo "==================================="
+  echo "  Unknown machine name "$1
+  echo "==================================="
+esac
