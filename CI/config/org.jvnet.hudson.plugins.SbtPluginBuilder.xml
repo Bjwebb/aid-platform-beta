@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<org.jvnet.hudson.plugins.SbtPluginBuilder_-DescriptorImpl plugin="sbt@1.4">
-  <jars>
-    <org.jvnet.hudson.plugins.SbtPluginBuilder_-Jar>
-      <name>sbt-launcher - todo get new sbt version</name>
-      <path>/tmp/sbt-launch.jar</path>
-    </org.jvnet.hudson.plugins.SbtPluginBuilder_-Jar>
-  </jars>
-</org.jvnet.hudson.plugins.SbtPluginBuilder_-DescriptorImpl>
