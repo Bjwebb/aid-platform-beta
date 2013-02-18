@@ -19,7 +19,7 @@ object Projects extends Controller {
                                                    "status" : "Implementation",
                                                    "sector-groups" : [{
                                                                      "name" : "Research",
-                                                                     "percentage" : "100%"
+                                                                     "percentage" : 100
                                                                      }]
                                                 },
                                         "GB-1-113492" : {
@@ -34,11 +34,11 @@ object Projects extends Controller {
                                                     "status" : "Completed",
                                                     "sector-groups" : [{
                                                                       "name" : "Livestock",
-                                                                      "percentage" : "90%"
+                                                                      "percentage" : 90
                                                                       },
                                                                       {
                                                                       "name" : "Social Welfare",
-                                                                      "percentage" : "10%"
+                                                                      "percentage" : 10
                                                                       }]
                                                     },
                                         "GB-1-200094" : {
@@ -52,11 +52,11 @@ object Projects extends Controller {
                                                    "status" : "Implementation",
                                                    "sector-groups" : [{
                                                                           "name" : "Livestock",
-                                                                          "percentage" : "90%"
+                                                                          "percentage" : 90
                                                                        },
                                                                        {
                                                                           "name" : "Social Welfare",
-                                                                          "percentage" : "10%"
+                                                                          "percentage" : 10
                                                                        }]
                                                }
                                       }
