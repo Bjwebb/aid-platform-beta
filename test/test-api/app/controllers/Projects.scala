@@ -20,6 +20,14 @@ object Projects extends Controller {
                                                    "sector-groups" : [{
                                                                      "name" : "Research",
                                                                      "percentage" : 100
+                                                                     }],
+                                                  "partner-split" : [{
+                                                                          "name" : "National NGO",
+                                                                         "percentage" : 50
+                                                                     },
+                                                                     {
+                                                                         "name" : "Multilateral",
+                                                                         "percentage" : 50
                                                                      }]
                                                 },
                                         "GB-1-113492" : {
@@ -39,6 +47,18 @@ object Projects extends Controller {
                                                                       {
                                                                       "name" : "Social Welfare",
                                                                       "percentage" : 10
+                                                                      }],
+                                                    "partner-split" : [{
+                                                                         "name" : "National NGO",
+                                                                        "percentage" : 33
+                                                                      },
+                                                                      {
+                                                                          "name" : "Multilateral",
+                                                                          "percentage" : 33
+                                                                      },
+                                                                      {
+                                                                          "name" : "Government",
+                                                                          "percentage" : 33
                                                                       }]
                                                     },
                                         "GB-1-200094" : {
@@ -57,7 +77,23 @@ object Projects extends Controller {
                                                                        {
                                                                           "name" : "Social Welfare",
                                                                           "percentage" : 10
-                                                                       }]
+                                                                       }],
+                                                   "partner-split" : [{
+                                                                          "name" : "National NGO",
+                                                                          "percentage" : 25
+                                                                        },
+                                                                        {
+                                                                           "name" : "Multilateral",
+                                                                           "percentage" : 25
+                                                                        },
+                                                                        {
+                                                                           "name" : "Government",
+                                                                           "percentage" : 25
+                                                                        },
+                                                                        {
+                                                                           "name" : "Foundation",
+                                                                           "percentage" : 25
+                                                                        }]
                                                }
                                       }
 
