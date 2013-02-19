@@ -1,0 +1,49 @@
+---
+title: D3 Graphs
+---
+
+<div id="target" style="width:200px;">
+</div>
+
+<script src="/javascripts/donut.js"></script>
+<script>
+
+  (function(){
+
+    var sectors = [{
+      sector: "Strengthening civil society", 
+      count: 12
+    }, {
+      sector: "Economic and development policy/planning", 
+      count: 11
+    }, {
+      sector: "Reproductive health care", 
+      count: 9
+    },  {
+      sector: "Research/scientific institutions", 
+      count: 8
+    },  {
+        sector: "Health policy and administrative management", 
+        count: 8
+    },  {
+      sector: "Social/ welfare services", 
+      count: 8
+    },  {
+      sector: "Primary education", 
+      count: 7
+    },  {
+      sector: "Other", 
+      count: 131
+    }]
+
+    charts.donut("#target", sectors, function(d) { 
+      return d.count; 
+    }, function(d){ 
+      return d.sector 
+    }, function(d) { 
+      return d.count + " projects"; 
+    });
+  })()
+
+</script>
+
