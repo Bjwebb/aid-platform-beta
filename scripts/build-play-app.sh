@@ -2,6 +2,8 @@
 
 # Update current repo
 git pull origin master
+git submodule init
+git submodule update
 
 # Update the Build Submodule
 cd ./build
