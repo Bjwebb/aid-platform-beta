@@ -5,6 +5,11 @@ git pull origin master
 git submodule init
 git submodule update --merge
 
+# force master branch due to jenkins? detaching the head
+cd build
+git checkout master
+cd ..
+
 # Remove curent aretfacts
 rm -rf "./build/artefacts/"$1
 mkdir -p "./build/artefacts/"$1

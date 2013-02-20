@@ -5,6 +5,10 @@ git pull origin master
 git submodule init
 git submodule update --merge
 
+cd build
+git checkout master
+cd ..
+
 # Remove curent Loader aretfacts
 rm -rf ./build/artefacts/loader
 
