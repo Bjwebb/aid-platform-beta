@@ -7,6 +7,7 @@ git submodule update --merge
 
 cd build
 git checkout master
+git pull origin master
 cd ..
 
 # Remove curent Loader aretfacts

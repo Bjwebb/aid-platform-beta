@@ -8,6 +8,7 @@ git submodule update --merge
 # force master branch due to jenkins? detaching the head
 cd build
 git checkout master
+git pull origin master
 cd ..
 
 # Remove curent aretfacts
