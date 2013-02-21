@@ -10,15 +10,15 @@ echo "Deploying and running cms application..."
 unzip -o ./build/artefacts/cms/*.zip -d ./running/
 chmod a+x ./running/cms*/start
 ./scripts/playctrl.sh running/cms-1.0-SNAPSHOT/ start 9000
-#running/cms*/start -Dhttp.port=9000 &
 
 #echo "Deploying and running loader application..."
 #cp ./build/artefacts/loader/*-dist.jar ./running/
 #java -jar ./running/loader*-dist.jar
 
-#echo "Deploying and running cms application..."
-#unzip -o ./build/artefacts/api/*.zip -d ./running/
-#chmod a+x ./running/api*/start
+echo "Deploying and running api application..."
+unzip -o ./build/artefacts/api/*.zip -d ./running/
+chmod a+x ./running/api*/start
+./scripts/playctrl.sh running/api-1.0-SNAPSHOT/ start 9001
 #./running/api*/start -Dhttp.port=9001 &
 
 #echo "Deploying and running search application..."
