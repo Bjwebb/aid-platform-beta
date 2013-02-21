@@ -2,10 +2,12 @@
 
 # Update current repo
 git pull origin master
+git submodule init
+git submodule update --merge
 
-# Update the Build Submodule
-cd ./build
-git pull origin master
+# force master branch due to jenkins? detaching the head
+cd build
+git checkout master
 cd ..
 
 # Remove curent aretfacts
@@ -18,10 +20,10 @@ play clean dist
 cd ../..
 
 # Move new artefacts
-mv "./src/"$1"/dist/"*.zip "./build/artefacts/"$1
+unzip -o "./src/"$1"/dist/"*.zip -d "./build/artefacts/"$1
 
 # Commit new artefacts
-cd build
+cd ./build
 git add -A
 git commit -m "Automated Commit: "$1
 git push origin master

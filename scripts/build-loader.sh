@@ -2,10 +2,11 @@
 
 # Update current repo
 git pull origin master
+git submodule init
+git submodule update --merge
 
-# Update the Build Submodule
-cd ./build
-git pull origin master
+cd build
+git checkout master
 cd ..
 
 # Remove curent Loader aretfacts
