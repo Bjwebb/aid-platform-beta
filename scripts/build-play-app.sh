@@ -21,7 +21,7 @@ play clean dist
 cd ../..
 
 # Move new artefacts
-unzip -o "./src/"$1"/dist/"*.zip -d "./build/artefacts/"$1
+mv "./src/"$1"/dist/"*.zip "./build/artefacts/"$1
 
 # Commit new artefacts
 cd ./build
