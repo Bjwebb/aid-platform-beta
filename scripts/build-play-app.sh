@@ -8,6 +8,7 @@ git submodule update --merge
 # force master branch due to jenkins? detaching the head
 cd build
 git checkout master
+git pull origin master
 cd ..
 
 # Remove curent aretfacts
@@ -20,7 +21,7 @@ play clean dist
 cd ../..
 
 # Move new artefacts
-unzip -o "./src/"$1"/dist/"*.zip -d "./build/artefacts/"$1
+mv "./src/"$1"/dist/"*.zip "./build/artefacts/"$1
 
 # Commit new artefacts
 cd ./build
