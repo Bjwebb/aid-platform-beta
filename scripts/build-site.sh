@@ -1,7 +1,8 @@
 #!/bin/bash
 
 cd src/site
+rm -rf directory
 bundle install
 bundle exec middleman build --clean
-cp -R build/* /mnt/www
+cp -fR build/* /mnt/www
 cd ../..
