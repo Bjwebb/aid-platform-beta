@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description></description>
+  <description>Used to deploy the current version of the site</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <com.gmail.ikeike443.PlayAutoTestJobProperty/>
@@ -12,12 +12,12 @@
       <hudson.plugins.git.UserRemoteConfig>
         <name></name>
         <refspec></refspec>
-        <url>git@github.com:DFID/aid-platform-beta.git</url>
+        <url>git@github.com:DFID/aid-platform-site.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>master</name>
+        <name>**</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <disableSubmodules>false</disableSubmodules>
@@ -38,7 +38,7 @@
     <excludedRegions></excludedRegions>
     <excludedUsers></excludedUsers>
     <gitConfigName>Jenkins</gitConfigName>
-    <gitConfigEmail>m.zdunski@kainos.com</gitConfigEmail>
+    <gitConfigEmail>james@yobriefca.se</gitConfigEmail>
     <skipTag>false</skipTag>
     <includedRegions></includedRegions>
     <scmName></scmName>
@@ -55,44 +55,14 @@
   </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
-    <org.jvnet.hudson.plugins.SbtPluginBuilder>
-      <name>sbt-launch</name>
-      <jvmFlags></jvmFlags>
-      <sbtFlags>-Dsbt.log.noformat=true</sbtFlags>
-      <actions>compile test</actions>
-      <subdirPath>src/cms/</subdirPath>
-    </org.jvnet.hudson.plugins.SbtPluginBuilder>
-    <org.jvnet.hudson.plugins.SbtPluginBuilder>
-      <name>sbt-launch</name>
-      <jvmFlags></jvmFlags>
-      <sbtFlags>-Dsbt.log.noformat=true</sbtFlags>
-      <actions>compile test</actions>
-      <subdirPath>src/api/</subdirPath>
-    </org.jvnet.hudson.plugins.SbtPluginBuilder>
-    <org.jvnet.hudson.plugins.SbtPluginBuilder>
-      <name>sbt-launch</name>
-      <jvmFlags></jvmFlags>
-      <sbtFlags>-Dsbt.log.noformat=true</sbtFlags>
-      <actions>compile test</actions>
-      <subdirPath>src/loader/</subdirPath>
-    </org.jvnet.hudson.plugins.SbtPluginBuilder>
-    <org.jvnet.hudson.plugins.SbtPluginBuilder>
-      <name>sbt-launch</name>
-      <jvmFlags></jvmFlags>
-      <sbtFlags>-Dsbt.log.noformat=true</sbtFlags>
-      <actions>compile test</actions>
-      <subdirPath>src/search/</subdirPath>
-    </org.jvnet.hudson.plugins.SbtPluginBuilder>
     <hudson.tasks.Shell>
-      <command>./scripts/build-cms.sh
-./scripts/build-api.sh
-./scripts/build-loader.sh
-./scripts/build-search.sh
-BUILD_ID=KillItOrNotToKillIt ./scripts/runAll.sh
-./scripts/build-site.sh
-</command>
+      <command>cp -fR ./* /mnt/www</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
-  <buildWrappers/>
+  <buildWrappers>
+    <hudson.plugins.ansicolor.AnsiColorBuildWrapper>
+      <colorMapName>xterm</colorMapName>
+    </hudson.plugins.ansicolor.AnsiColorBuildWrapper>
+  </buildWrappers>
 </project>
