@@ -46,11 +46,21 @@ The project uses a minimum set of tools to allow us to manage the project.  If y
 - 2 week sprints 
 - First Sprint - (4th Feb -> 15th Feb)
 - Second Sprint - (18th Feb -> 1st Mar)
-- Third Sprint - (4th Mar - > 15th Mar) 
-- Final Sprint - (18th Mar -> 8th Apr)
-- Prep for Beta - (9th Apr -> 26th Apr)
+- Third Sprint - (4th Mar - > 21st Mar) 
+- Final Sprint - (22nd Mar -> 5th Apr)
+- Prep for Beta - (8th Apr -> 26th Apr)
 
 ### <a name="definition-of-done"></a> Definition of Done
+
+- Acceptance Criteria met and tested against the following browsers
+    - 	Desktop	Internet Explorer 9
+    - 	Desktop	Chrome 23
+    -	Desktop	Internet Explorer 8
+    - 	iOS Safari 6
+    - 	Desktop Firefox 16
+    - 	Desktop	Internet Explorer 7
+    - 	Desktop	Safari 6
+    - 	iOS Safari 5.1
 
 - Code committed with acceptable explanation of purpose and changes (inc. Tests)
 - Pull Request opened, reviewed and accepted by Team, merged by TDA
