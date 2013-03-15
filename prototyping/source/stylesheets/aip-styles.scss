@@ -10,13 +10,38 @@ $lightGrey: #F5F5F5;
 $orange: #F17921;
 
 /*  
+/* font sizes
+-----------------------------------------------*/
+$normal: 1.2em;
+$normal-plus: 1.25em;
+
+/* re-usable styles
+-----------------------------------------------*/
+@mixin list-item {
+	list-style: none;
+	font-size: $normal;
+	border-bottom: 1px solid $midGrey;	
+}
+@mixin list-span{
+	display: block;
+	font-size: $normal-plus;
+}
+
+/*  
 -----------------------------------------------*/
 @media screen{
 	body{ 
 		background: $midGrey;
 	}
 }
-
+.clr-fix:before,
+.clr-fix:after {
+    content: " ";
+    display: table;
+}
+.clr-fix:after {
+    clear: both;
+}
 /* Main header/masthead styles 
 -----------------------------------------------*/
 #global-header {
@@ -49,16 +74,27 @@ $orange: #F17921;
 }
 #page-title h1{
 	font-weight: normal;
+	margin-top: 0;
 }
-#page-title h1 span{
+#page-title h1 small{
+	white-space: nowrap;
+}
+#page-title span{
 	display: block;
-	font-size: 30%;
 	font-weight: normal;
 	text-transform: uppercase;
+	margin-top: 20px;
 }
 #page-title img {
 	float: right;
-	padding: 0.75em 0;
+	padding: 20px 0;
+}
+#page-title img+div {
+	padding-right: 90px;
+}
+#page-title h1 img {
+	float: left;
+	padding: 0.15em 0.25em 0 0;
 }
 #page-title img+div {
 	padding-right: 90px;
@@ -69,6 +105,7 @@ $orange: #F17921;
 	background: $lightGrey;
 	padding: 20px;
 	text-align: center;
+	margin-bottom: 20px;
 }
 #search-bar label {
 	display: inline;
@@ -90,9 +127,9 @@ $orange: #F17921;
 #search-bar input.button {
 	display: inline-block;
 	width: 6em;
-	font-size: 1.2em;
+	font-size: $normal;
 }
-@media screen and (max-width: 648px) {
+@media screen and (max-width: 667px) {
 	#search-bar label h3 {
 		display: block!important;
 		margin: 0 0 10px;
@@ -112,6 +149,9 @@ $orange: #F17921;
 #search-bar form {
 	margin: 0;
 }
+.map {
+	margin-top: -20px;
+}
 /* content grouping styles
 -----------------------------------------------*/
 .page-wrapper {
@@ -123,6 +163,100 @@ $orange: #F17921;
 	padding-top: 1em;
 	padding-bottom: 0.25em
 }
+.content .section-group-title {
+	font-weight: normal;
+	font-size: 1.75em;
+}
+/* no longer used?
+.mdg-list {
+	list-style: none;
+}
+.mdg-list li{
+	padding: 0.5em 0;
+	border-bottom: 1px solid #dee0e2;
+	font-size: 1.2em;
+}
+.mdg-list li:first-child{
+	padding: 1em 0 0.5em;
+}
+.mdg-list li .label{
+	padding-top: 3px;
+	font-weight: normal;
+	margin-left: 1em;
+}
+.label.green {
+	background: #339900;
+}
+.label.amber {
+	background: #ff6600;
+}
+.label.red {
+	background: #cc3333;
+}
+.label.grey {
+	background: #999999;
+}
+*/
+.results-info h3 {
+	font-size: 1.5em;
+	/*font-weight: normal;*/
+	
+}
+.results-info ul {
+	margin-bottom: 3em;
+}
+.results-info li {
+	padding: 0.75em 0 0.5em 0;
+	line-height: 1.1em;
+	@include list-item;
+}
+.results-info li span {
+	@include list-span;
+	padding: 0.5em 0;
+	
+}
+/*--------------------------------------------- 
+Sector breakdown
+-----------------------------------------------*/
+.sector-list {
+	list-style: none;
+}
+.sector-list li{
+	padding: 0.25em 0 ;
+	@include list-item;
+}
+.sector-list li:first-child{
+	padding: 1em 0 0.25em 0 ;
+}
+.sector-list li a{
+	display: block;
+}
+.sector-list div.progress{
+	border: none;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+.sector-list div.progress em{
+	position: absolute;
+	top: 2px;
+	left: 5px;
+	font-style: normal;
+	font-weight: bold;	
+}
+.sector-list div.progress .meter {
+	background-color: #d4e2f0;	
+	float: left;
+}
+.sector-list div.progress .meter+span {
+	float: left;
+	display: inline-block;
+	padding-top: 2px; 
+	font-weight: bold;
+	margin-left: 20px;
+}
+
+
 
 /* site entry navigation styles
 -----------------------------------------------*/
@@ -199,6 +333,8 @@ $orange: #F17921;
 .tab-bar-container {
 	background: $darkGrey;
 	border-bottom: 1px solid #fff;
+	margin-top: -20px;
+	margin-bottom: 20px;
 }
 .tab-bar {
 	margin: 0.75em 0 0 0;
@@ -234,7 +370,7 @@ $orange: #F17921;
 	.projects-nav p{
 		display: block;
 		text-align: center;
-		font-size: 1.2em;
+		font-size: $normal;
 		margin: 10px 0;
 		color: #fff;
 	}
@@ -257,7 +393,7 @@ $orange: #F17921;
 }
 .budget-total p{
 	color: $midGrey;
-	font-size: 1.2em;
+	font-size: $normal;
 	line-height: 1.1em;
 	text-align: right;
 	margin: 0.5em 1em 0;
@@ -285,17 +421,15 @@ $orange: #F17921;
 	font-weight: normal;
 }
 .top-5s ol {
-	list-style: none;
 	margin-left: 0;
 }
 .top-5s ol li {
-	font-size: 1.2em;
-	border-top: 1px solid $midGrey;
-	line-height: 1.2em;
-	padding: 0.3em 0
+	@include list-item;
+	line-height: 1.25em;
+	padding: 0.5em 0
 }
 .top-5s em {
-	display: block;
+	@include list-span;
 	font-style: normal;
 	color: $darkGrey;
 	padding-top: 0;
@@ -303,8 +437,74 @@ $orange: #F17921;
 .top-5s a  {
 	display: block;
 }
+
+/* Results styles
+-----------------------------------------------*/
+.suggested-result {
+	background: $lightGrey;
+	padding: 20px 15px;
+	margin-bottom: 20px; 
+}
+.suggested-result p{
+	font-size: $normal-plus;
+}
+.suggested-result p span{
+	display: block;
+}
+#filter ul {
+	margin: 0;
+	padding: 0;
+	list-style:none;
+}
+#filter h3{
+	font-weight: normal;
+	font-size: 1.5em;
+	margin-top: 0;
+}
+#filter h3 + ul{
+	margin-bottom: 20px;
+}
+#search-results ul{
+	margin: 0;
+	padding: 0;
+	list-style:none;
+}
+#search-results li{
+	margin-bottom: 30px;
+	list-style:none;
+}
+#search-results h3{
+	font-weight: normal;
+	font-size: 1.75em;
+	margin-bottom: 0.25em
+}
+#search-results span{
+	display:block;
+	font-size: $normal-plus;
+	line-height: 1.5em
+}
+#search-results span em{
+	font-style: normal;
+	font-weight: bold;
+	color:  #008270;
+}
 /* button styles
 -----------------------------------------------*/
+.button-row {
+	float: right; min-height: 1px; padding: 0 15px 0 0; position: relative;
+}
+.button-row a{
+	color:#fff;
+	margin-left: 20px;
+}
+.button-row span{
+	
+	line-height: 2.75em;
+	height: 2.75em;
+	text-align: right;
+	margin: 0.5em 1em 0;
+	display: inline-block;
+}
 .button {
     background-color:#008270;
     color:#fff;
@@ -317,13 +517,17 @@ $orange: #F17921;
     font-weight:300;
     padding: 5px 0;
 }
+a.button {
+    display: inline-block;
+    padding: 5px 10px;
+}
 .button, .button:visited{
     display:inline;
     border:none;
     text-decoration:none;
     position:relative;
     top:-2px;
-    line-height:1.25;
+    line-height:1.25em;
     -webkit-box-shadow:0 2px 0 #000;
     -moz-box-shadow:0 2px 0 #000;
     box-shadow:0 2px 0 #000;
@@ -332,7 +536,168 @@ $orange: #F17921;
     background-color:#3ABAA8;
     color:#fff
 }
-/* Disclaimer Styles 
+.button.link {
+	background: none
+}
+.button.serious {
+    background-color:#990000;
+    color:#fff;
+    font-weight: bold;
+}
+.button.serious:hover {
+    background-color:#AA0000;
+    color:#fff;
+}
+@media screen and (max-width: 700px) {
+	.button-row  {
+		float: none; min-height: 1px; padding: 0 15px; position: relative;
+		display: block;
+	}
+	.button-row span{
+	text-align: center;
+	}
+}
+/* Content Styles 
+-----------------------------------------------*/
+.summary p {
+	font-size: $normal-plus;
+	margin: 1em 0;
+}
+.summary li{
+	font-size: $normal-plus;
+	margin: 0.5em 0;
+	border-top: 1px solid #e4e4e4;
+}
+.info-notice {
+	background: url(https://djb1962t8apu5.cloudfront.net/static/icon-information.png) no-repeat 0 50%;
+	font-size: 1.5em;
+	line-height: 2em;
+	height: 2em;
+	padding-left: 35px;
+	font-weight: normal;
+}
+/* -----------------------------------------
+   Results table styles
+-----------------------------------------------*/
+
+.results-list {
+	margin-top: 20px;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border: none;
+	width: 100%;
+}
+.result-list-row {
+	border-bottom: 1px solid $midGrey;
+}
+.results-list tbody th,
+.results-list tbody td{
+	text-align: left;
+	float:left;
+	padding: 0 0 10px ;
+	margin: 0;
+}
+.results-list tbody td{
+	padding-right: 30px;
+}
+.results-list tbody th{
+	font-size: 1.5em;
+	font-weight: normal;
+	padding: 15px 0 10px;
+	width: 100%;
+}
+
+/* -----------------------------------------
+   transactions styles
+-----------------------------------------------*/
+.transactions h3{
+	border-bottom: 1px solid $midGrey;
+	padding-bottom: 0.5em; 
+	margin-bottom: 0;
+	font-size: 1.5em
+}
+.transactions h3 span{
+	float: right;
+}
+
+/* -----------------------------------------
+   transactions table styles
+-----------------------------------------------*/
+
+.transactions-table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	border: none;
+	margin-bottom: 60px;
+	width: 100%;
+}
+.transactions-table tr {
+	border-bottom: 1px solid $midGrey;
+}
+.transactions-table th {
+	background: #FFF;
+} 
+.transactions-table tbody th {
+	font-weight: normal;
+	line-height: 1.5em;
+}
+.transactions-table th,
+.transactions-table td{
+	font-size: $normal;
+	text-align: left;
+	padding: 0.5em 30px 0.5em 0 ;
+	margin: 0 ;
+	width: 12.5%;
+	white-space: nowrap;
+	line-height: 1.5em;
+}
+.transactions-table th:first-child,
+.transactions-table td:first-child{
+	width: 62.5%;
+	white-space: normal;
+}
+.transactions-table th:last-child,
+.transactions-table td:last-child{
+	text-align: right;
+	padding-right: 0;
+	font-weight: bold;
+}
+.transactions-table tbody td{
+	padding-right: 30px;
+}
+@media screen and (max-width: 700px) {
+	
+	.transactions-table th,
+	.transactions-table td {
+		float: left;
+		margin-right: 20px;
+		width: auto!important;
+
+	}
+	.transactions-table tbody th {
+	width: 100%!important;
+	display: block;
+	padding-right: 0
+	}
+}
+/* -----------------------------------------
+	 info list Styles 
+-----------------------------------------------*/
+.info-list li{
+	@include list-item;
+	padding: 0.5em 0;
+	line-height:1.5em;
+}
+.info-list li:first-child{
+	padding-top: 0;
+}
+.info-list li span{
+	@include list-span;
+	font-weight: bold;
+}
+
+/* -----------------------------------------
+	 Disclaimer Styles 
 -----------------------------------------------*/
 .disclaimer{
 	background: $orange;
@@ -349,7 +714,35 @@ $orange: #F17921;
 	font-style: normal;
 	font-weight: bold;
 }
+/* Breadcrumb Styles 
+-----------------------------------------------*/
+.breadcrumb {
+	margin-bottom: 10px;
+}
+.breadcrumb ul{
+    list-style-type:none;
+}
 
+.breadcrumb li {
+    float:left;
+    color:#777;
+    max-width: 15em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.breadcrumb li a{
+    display:block;
+    padding:0 15px 0 0;
+    margin-right: 15px;
+    background: url(../images/separator.png) no-repeat right center;
+}
+
+.breadcrumb li:last-child a{
+    background: none;
+
+}
 /* Footer styles
 -----------------------------------------------*/
 #footer {
@@ -372,6 +765,15 @@ $orange: #F17921;
 
 /* Miscellaneous Styles
 ------------------------------------------------*/ 
+a[rel="external"]::after, .external-link::after {
+content: "";
+display: inline-block;
+width: 20px;
+height: 12px;
+margin-right: 0.2em;
+margin-left: -0.2em;
+background: url(../images/external-link.png) no-repeat;
+}
 .visually-hidden{
     left:-99999em !important;position:absolute
 }
