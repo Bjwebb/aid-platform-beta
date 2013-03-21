@@ -9,6 +9,20 @@ $midGrey: #dee0e2;
 $lightGrey: #F5F5F5;
 $orange: #F17921;
 
+/* Chart Palette
+-----------------------------------------------*/
+$pal1: #4f2938;
+$pal2: #b3424a;
+$pal3: #db7e64;
+$pal4: #eabb7e;
+$pal5: #ffd991;
+$pal6: #d8dcbf;
+$pal7: #a5bbae;
+$pal8: #70a09a;
+$pal9: #244e66;
+$pal10: #437bab;
+$pal11: #8cb6da;
+
 /*  
 /* font sizes
 -----------------------------------------------*/
@@ -88,9 +102,6 @@ $normal-plus: 1.25em;
 #page-title img {
 	float: right;
 	padding: 20px 0;
-}
-#page-title img+div {
-	padding-right: 90px;
 }
 #page-title h1 img {
 	float: left;
@@ -213,6 +224,11 @@ $normal-plus: 1.25em;
 .results-info li span {
 	@include list-span;
 	padding: 0.5em 0;
+	
+}
+.results-info li a {
+	@include list-span;
+	padding: 0.1em 0 0.5em 0;
 	
 }
 /*--------------------------------------------- 
@@ -695,7 +711,35 @@ a.button {
 	@include list-span;
 	font-weight: bold;
 }
+/* -----------------------------------------
+	 legend list Styles 
+-----------------------------------------------*/
+.legend-list li{
+	@include list-item;
+	padding: 0 0 0 1.5em;
+	line-height:1.5em;
+	position: relative;
+	margin: 0.25em 0;
+}
 
+.legend-list li em{
+	@include list-span;
+	font-weight: bold;
+	font-style: normal;
+}
+.legend-list li span{
+	width: 10px;
+	height: 92%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.theme-1 { background: $pal1;}
+.theme-2 { background: $pal2;}
+.theme-3 { background: $pal3;}
+.theme-4 { background: $pal4;}
+.theme-5 { background: $pal5;}
+.theme-6 { background: $pal6;}
 /* -----------------------------------------
 	 Disclaimer Styles 
 -----------------------------------------------*/
@@ -743,6 +787,35 @@ a.button {
     background: none;
 
 }
+/* Partner page Styles 
+-----------------------------------------------*/
+#page-title .partner-title {
+	background: $darkGrey;
+	color: #fff;
+	margin-bottom: 1em;
+}
+#page-title .partner-title h1 {
+	color: #fff;
+}
+#page-title.partner-masthead h2{
+	font-weight: normal;
+}
+#page-title.partner-masthead h2 img {
+	float: left;
+	padding: 0.15em 0.25em 0 0;
+}
+#page-title.partner-masthead h2 small{
+	white-space: nowrap;
+}
+.tab-bar-container.partners {
+	background: $midGrey;
+	color: #000;
+}
+.tab-bar-container.partners .projects-nav a,
+.tab-bar-container.partners .projects-nav p{
+	color: #000;
+}
+
 /* Footer styles
 -----------------------------------------------*/
 #footer {
@@ -766,14 +839,21 @@ a.button {
 /* Miscellaneous Styles
 ------------------------------------------------*/ 
 a[rel="external"]::after, .external-link::after {
-content: "";
-display: inline-block;
-width: 20px;
-height: 12px;
-margin-right: 0.2em;
-margin-left: -0.2em;
-background: url(../images/external-link.png) no-repeat;
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 12px;
+	margin-right: 0.2em;
+	margin-left: -0.2em;
+	background: url(../images/external-link.png) no-repeat;
 }
+
+.img-circle {
+	-webkit-border-radius: 500px;
+	-moz-border-radius: 500px;
+	border-radius: 500px;
+}
+
 .visually-hidden{
     left:-99999em !important;position:absolute
 }
