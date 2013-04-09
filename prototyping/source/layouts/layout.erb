@@ -43,11 +43,17 @@
     <header role="banner" id="global-header">
       <div class="row">
         <div class="twelve columns">
-          <h2><a href="/" title="Go to the homepage">Department for International Development</a></h2>
+          <h2><a href="/" title="Go to the homepage">Aid Information Platform</a></h2>
+          <form id="search" class="site-search" action="/search" method="get" role="search">
+            <label for="site-search-text" class="visually-hidden">Search</label>
+            <input type="search" name="q" id="site-search-text" title="Search"><input class="button" type="submit" value="Search">
+          </form>
         </div>
+        
       </div>
     </header>
     <div class="page-wrapper">
+      <a name="content"></a>
       <!--<div class="row">
         <div class="twelve columns">
           <div class="disclaimer">     
