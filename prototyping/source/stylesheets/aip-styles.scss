@@ -2,12 +2,13 @@
 
 /* Colour Palette
 -----------------------------------------------*/
-$dfid: #729ECD;
+$dfid: #002878;
 $nearBlack: #303030;
 $darkGrey: #666;
 $midGrey: #dee0e2;
 $lightGrey: #F5F5F5;
 $orange: #F17921;
+$yellow: #FFBF47;
 
 /* Chart Palette
 -----------------------------------------------*/
@@ -56,6 +57,21 @@ $normal-plus: 1.25em;
 .clr-fix:after {
     clear: both;
 }
+@media screen {
+	a:focus {
+		background-color: $yellow;
+		outline: 3px solid $yellow;
+		color: #000!important	;	
+	}
+	input:focus, 
+	textarea:focus, 
+	select:focus {
+	outline: 3px solid #ffbf47;
+	}
+	#nav-entry h2 a:hover {
+		text-decoration: none;
+	}
+}
 /* Main header/masthead styles 
 -----------------------------------------------*/
 #global-header {
@@ -65,50 +81,71 @@ $normal-plus: 1.25em;
 	z-index: 1000;
 }
 #global-header h2 {
+	font-size: 1.7em;
+	font-weight: normal;
+	border-left: 3px solid #fff;
+	padding: 3px 0 3px 13px ;
+	display: inline-block;
+	margin: 7px 0;
+}
+#global-header h2 a{
+	color: #fff;
 	margin: 0;
 }
-#global-header h2 a {
-	background-image: url(../images/dfid-banner.png);
-	background-position: 0 0px;
-	background-repeat: no-repeat;
-	display: block;
-	margin: 0.2em 0;
-	padding: 0 0 0 2em;
-	width: 532px;
-	height: 32px;
-	line-height: 2em;
-	text-indent: -99999px;
+#global-header form#search {
+	float: right;
+	margin: 0.5em 0 0;
 }
-#global-header h2 a:hover {
-	background-position: 0 -42px;
-	text-decoration: underline;
+#global-header form#search #site-search-text {
+	font-family: "nta",Arial,sans-serif;
+	text-transform: none;
+	margin: 0 0.25em 0 0;
+	-webkit-appearance: none;
+	display: inline-block;
+	width: auto;
+	height: auto;
+	padding: 6px 0 6px 0;
 }
-#page-title {
-	/*margin: 0.5em 0;*/
+#global-header form#search input.button {
+	font-family: "nta",Arial,sans-serif;
+	font-size: 1.25em;
+	font-weight: 300;
+	text-transform: none;
+	display: inline;
+	margin: 0;
+	padding: 0.25em 0.5em;
+	top: -1px;
 }
 #page-title h1{
 	font-weight: normal;
 	margin-top: 0;
+	padding-top: 10px;
+	font-size: 2.5em;
+	clear:left;
 }
 #page-title h1 small{
 	white-space: nowrap;
 }
-#page-title span{
-	display: block;
-	font-weight: normal;
-	text-transform: uppercase;
-	margin-top: 20px;
-}
+
 #page-title img {
 	float: right;
-	padding: 20px 0;
+	margin-top: 10px;
 }
 #page-title h1 img {
 	float: left;
-	padding: 0.15em 0.25em 0 0;
+	padding: 0.1em 0.25em 0 0;
+	margin-top: 0;
 }
 #page-title img+div {
 	padding-right: 90px;
+}
+.dfid-logo {
+	border-left: 3px solid #002878;
+	font-size: $normal-plus;
+	font-weight: normal;
+	background: url(../images/org-crest-18px.png) 13px 0 no-repeat;
+	padding: 35px 0 0 13px;
+	margin-bottom: 0;
 }
 /* global search styles
 -----------------------------------------------*/
@@ -117,6 +154,7 @@ $normal-plus: 1.25em;
 	padding: 20px;
 	text-align: center;
 	margin-bottom: 20px;
+	margin-top: 20px;
 }
 #search-bar label {
 	display: inline;
@@ -139,6 +177,7 @@ $normal-plus: 1.25em;
 	display: inline-block;
 	width: 6em;
 	font-size: $normal;
+	 padding: 5px 0;
 }
 @media screen and (max-width: 667px) {
 	#search-bar label h3 {
@@ -171,47 +210,17 @@ $normal-plus: 1.25em;
 }
 .section-group-title {
 	border-bottom: 5px solid $dfid;
-	padding-top: 1em;
-	padding-bottom: 0.25em
-}
-.content .section-group-title {
+	padding-top: 0;
+	padding-bottom: 0.25em;
+	margin-top: 0;
 	font-weight: normal;
-	font-size: 1.75em;
 }
-/* no longer used?
-.mdg-list {
-	list-style: none;
+h2.section-group-title {
+	font-size: 1.9em;
+	margin-top: 30px;
 }
-.mdg-list li{
-	padding: 0.5em 0;
-	border-bottom: 1px solid #dee0e2;
-	font-size: 1.2em;
-}
-.mdg-list li:first-child{
-	padding: 1em 0 0.5em;
-}
-.mdg-list li .label{
-	padding-top: 3px;
-	font-weight: normal;
-	margin-left: 1em;
-}
-.label.green {
-	background: #339900;
-}
-.label.amber {
-	background: #ff6600;
-}
-.label.red {
-	background: #cc3333;
-}
-.label.grey {
-	background: #999999;
-}
-*/
-.results-info h3 {
-	font-size: 1.5em;
-	/*font-weight: normal;*/
-	
+.results-info h4 {
+	font-size: 1.5em;	
 }
 .results-info ul {
 	margin-bottom: 3em;
@@ -224,12 +233,10 @@ $normal-plus: 1.25em;
 .results-info li span {
 	@include list-span;
 	padding: 0.5em 0;
-	
 }
 .results-info li a {
 	@include list-span;
 	padding: 0.1em 0 0.5em 0;
-	
 }
 /*--------------------------------------------- 
 Sector breakdown
@@ -271,17 +278,25 @@ Sector breakdown
 	font-weight: bold;
 	margin-left: 20px;
 }
-
-
-
-/* site entry navigation styles
+/* landing page site entry navigation styles
 -----------------------------------------------*/
-
+#nav-entry {
+	margin-bottom: 30px;
+}
+#nav-entry h2 {
+	margin: 0;
+}
 #nav-entry h2 a{
 	color: #000;
 	text-transform: uppercase;
 	font-size: 0.8em;
 	margin-bottom: 0;
+}
+#nav-entry h2 a:focus{
+	outline: 3px solid $yellow;
+	background: none;
+	z-index:1000;
+	display: block;
 }
 #nav-entry h2 a small{
 	font-size: 50%;
@@ -303,7 +318,9 @@ Sector breakdown
 	margin-top: -2.25em ;
 	background-color: #FFF;
 }
-
+#nav-entry h2:hover{
+	outline: 3px solid $yellow;
+}
 @media screen and (min-width: 421px) and (max-width: 767px) {
 	#nav-entry .col	{
 		width: 49%!important;
@@ -334,11 +351,11 @@ Sector breakdown
 		border-bottom: 1px solid $midGrey;
 		background: url(../images/nav-next-arrow.png) no-repeat 100% 50%;
 	}
+	#nav-entry .col a:hover {
+		text-decoration: underline;
+	}
 }
-
-
-
-/* tab bar nav  styles
+/* tab bar nav styles
 -----------------------------------------------*/
 .projects-nav {
 	float: left; min-height: 1px; padding: 0 0 0 15px; position: relative;
@@ -349,8 +366,9 @@ Sector breakdown
 .tab-bar-container {
 	background: $darkGrey;
 	border-bottom: 1px solid #fff;
-	margin-top: -20px;
+	/*margin-top: -20px;  removed when search bar moved into top row */
 	margin-bottom: 20px;
+	margin-top: 10px;
 }
 .tab-bar {
 	margin: 0.75em 0 0 0;
@@ -433,16 +451,31 @@ Sector breakdown
 
 /* Top 5 lists
 -----------------------------------------------*/
+@media screen and (min-width: 767px) {
+	#top-5-sectors.columns {
+		padding: 0 14px;
+		border-left: 1px solid $midGrey;
+		border-right: 1px solid $midGrey;
+	}
+}
+.top-5s {
+	margin-top: 10px ;
+	margin-bottom: 10px;
+}
 .top-5s h4 {
-	font-weight: normal;
+	margin-top: 0;
 }
 .top-5s ol {
 	margin-left: 0;
+	margin-bottom: 0;
 }
 .top-5s ol li {
 	@include list-item;
 	line-height: 1.25em;
 	padding: 0.5em 0
+}
+.top-5s ol li:last-child {
+	border-bottom: 0;
 }
 .top-5s em {
 	@include list-span;
@@ -454,7 +487,7 @@ Sector breakdown
 	display: block;
 }
 
-/* Results styles
+/* search result styles
 -----------------------------------------------*/
 .suggested-result {
 	background: $lightGrey;
@@ -471,6 +504,9 @@ Sector breakdown
 	margin: 0;
 	padding: 0;
 	list-style:none;
+}
+#filter label {
+	font-weight: normal;
 }
 #filter h3{
 	font-weight: normal;
@@ -513,8 +549,7 @@ Sector breakdown
 	color:#fff;
 	margin-left: 20px;
 }
-.button-row span{
-	
+.button-row span{	
 	line-height: 2.75em;
 	height: 2.75em;
 	text-align: right;
@@ -531,7 +566,7 @@ Sector breakdown
     -moz-box-shadow:0 3px 0 #000;
     box-shadow:0 3px 0 #000;
     font-weight:300;
-    padding: 5px 0;
+
 }
 a.button {
     display: inline-block;
@@ -575,9 +610,16 @@ a.button {
 }
 /* Content Styles 
 -----------------------------------------------*/
+.row-summary {
+	margin-bottom: 30px;
+}
+.row-summary h3{
+	font-weight: normal;
+	margin-bottom: 1em; 
+}
 .summary p {
 	font-size: $normal-plus;
-	margin: 1em 0;
+	margin: 0 0 1em;
 }
 .summary li{
 	font-size: $normal-plus;
@@ -593,9 +635,8 @@ a.button {
 	font-weight: normal;
 }
 /* -----------------------------------------
-   Results table styles
+   DFID Results table styles
 -----------------------------------------------*/
-
 .results-list {
 	margin-top: 20px;
 	border-collapse: collapse;
@@ -622,24 +663,15 @@ a.button {
 	padding: 15px 0 10px;
 	width: 100%;
 }
-
 /* -----------------------------------------
    transactions styles
 -----------------------------------------------*/
 .transactions h3{
-	border-bottom: 1px solid $midGrey;
-	padding-bottom: 0.5em; 
-	margin-bottom: 0;
-	font-size: 1.5em
+	margin-bottom: 0.5em;
 }
 .transactions h3 span{
 	float: right;
 }
-
-/* -----------------------------------------
-   transactions table styles
------------------------------------------------*/
-
 .transactions-table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -743,6 +775,28 @@ a.button {
 /* -----------------------------------------
 	 Disclaimer Styles 
 -----------------------------------------------*/
+#fraud-report fieldset {
+	border: none;
+	padding: 0;
+}
+#fraud-report legend {
+	font-size: $normal-plus;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+#fraud-report legend span{
+	font-weight: normal;
+}
+
+#fraud-report ol li{ 
+	@include list-item;
+}
+
+
+
+/* -----------------------------------------
+	 Disclaimer Styles 
+-----------------------------------------------*/
 .disclaimer{
 	background: $orange;
 }
@@ -760,29 +814,28 @@ a.button {
 }
 /* Breadcrumb Styles 
 -----------------------------------------------*/
-.breadcrumb {
-	margin-bottom: 10px;
-}
 .breadcrumb ul{
     list-style-type:none;
+    margin: 10px 0;
 }
-
 .breadcrumb li {
     float:left;
-    color:#777;
+     color:#777;
+    
+}
+.breadcrumb li:last-child, 
+.breadcrumb li a {  
     max-width: 15em;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-
 .breadcrumb li a{
     display:block;
     padding:0 15px 0 0;
     margin-right: 15px;
     background: url(../images/separator.png) no-repeat right center;
 }
-
 .breadcrumb li:last-child a{
     background: none;
 
@@ -799,10 +852,12 @@ a.button {
 }
 #page-title.partner-masthead h2{
 	font-weight: normal;
+	clear: left;
 }
 #page-title.partner-masthead h2 img {
 	float: left;
-	padding: 0.15em 0.25em 0 0;
+	padding: 0.1em 0.25em 0 0;
+	margin-top: 0;
 }
 #page-title.partner-masthead h2 small{
 	white-space: nowrap;
@@ -815,7 +870,15 @@ a.button {
 .tab-bar-container.partners .projects-nav p{
 	color: #000;
 }
-
+/* gloassry styles
+-----------------------------------------------*/
+.glossary ul {
+	list-style: none;
+}
+.glossary ul li h3{
+	font-size: $normal;
+	margin-bottom: 0;
+}
 /* Footer styles
 -----------------------------------------------*/
 #footer {
@@ -835,7 +898,6 @@ a.button {
 	text-align: center;
 	text-decoration: none;
 }
-
 /* Miscellaneous Styles
 ------------------------------------------------*/ 
 a[rel="external"]::after, .external-link::after {
@@ -847,13 +909,11 @@ a[rel="external"]::after, .external-link::after {
 	margin-left: -0.2em;
 	background: url(../images/external-link.png) no-repeat;
 }
-
 .img-circle {
 	-webkit-border-radius: 500px;
 	-moz-border-radius: 500px;
 	border-radius: 500px;
 }
-
 .visually-hidden{
     left:-99999em !important;position:absolute
 }
