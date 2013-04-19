@@ -205,3 +205,4 @@ These can be setup in you shells startup script eg.
 - Virginia McLachlan (v-mclachlan@dfid.gov.uk)
 - James Hughes (james@yobriefca.se)
 - Kyle Davidson (k.davidson@kainos.com)
+- Alison Coote (a.coote@kainos.com)
