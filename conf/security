@@ -1,0 +1,4 @@
+# Should be moved to /etc/apache2/conf.d
+ServerTokens Prod
+ServerSignature Off
+TraceEnable Off

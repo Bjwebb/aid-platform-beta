@@ -1,0 +1,25 @@
+<VirtualHost *:80>
+  DocumentRoot /var/www/
+  ErrorDocument 404 /404.html
+
+  <Location />
+      Deny from all
+      AuthUserFile /usr/local/etc/httpd/users
+      AuthName authorization
+      AuthType Basic
+      Satisfy Any
+      require valid-user
+  </Location>
+
+  ProxyRequests Off
+  ProxyPreserveHost Off
+
+  ProxyPass           /admin   http://localhost:9008/admin
+  ProxyPassReverse    /admin   http://localhost:9008/admin
+
+  ProxyPass           /search  http://localhost:9008/search
+  ProxyPassReverse    /search  http://localhost:9008/search
+
+  ProxyPass           /api     http://localhost:9008
+  ProxyPassReverse    /api     http://localhost:9008
+</VirtualHost>
