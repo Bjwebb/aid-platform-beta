@@ -3,7 +3,7 @@
 USERNAME=$1
 ENCRYPTED_PASSWORD=$2
 
-if [[ (-z $USERNAME) || (-z $ENCRYPTED_PASSWORD) ]]; then
+if [ -z $USERNAME ] || [ -z $ENCRYPTED_PASSWORD ]; then
   echo "Usage: "
   echo "        ./createuser <username> <bcryptedpassword>"
   echo ""

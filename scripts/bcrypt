@@ -2,7 +2,7 @@
 
 VALUE=$1
 
-if [[ (-z $VALUE) ]]; then
+if [ -z $VALUE ]; then
   echo "Usage: "
   echo "        ./bcrypt <password>"
   echo ""
@@ -11,5 +11,5 @@ if [[ (-z $VALUE) ]]; then
 fi
 
 cd ./bcryptor
-sbt "run $VALUE"
+./sbt "run $VALUE"
 cd ..

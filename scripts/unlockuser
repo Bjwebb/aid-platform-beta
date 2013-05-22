@@ -2,7 +2,7 @@
 
 USERNAME=$1
 
-if [[ (-z $USERNAME) ]]; then
+if [ -z $USERNAME ]; then
   echo "Usage: "
   echo "        ./unlockuser <username>"
   echo ""
