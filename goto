@@ -12,6 +12,9 @@ case $1 in
 "api"|"site")
   ssh ubuntu@ec2-46-137-43-29.eu-west-1.compute.amazonaws.com -i $2
   ;;
+"dev")
+  ssh ubuntu@ec2-54-247-7-93.eu-west-1.compute.amazonaws.com -i $2
+  ;;
 *)
   echo "==================================="
   echo "  Unknown machine name "$1
