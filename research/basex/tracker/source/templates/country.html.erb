@@ -1,0 +1,13 @@
+---
+---
+
+<h1><%= country_code %></h1>
+<h2>Projects: <%= projects.xpath("//results/count/text()").first %></h2>
+
+<% projects.xpath("//results/data/project").each do |project| %>
+  <div> 
+    <h1><%= project.xpath("title/text()").first %></h1>
+    <p><%= project.xpath("description/text()").first %></p>
+    <p>Budget: <span><%= project.xpath("budget/text()").first %></span></p>
+  </div>
+<% end %>

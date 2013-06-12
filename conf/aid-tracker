@@ -1,25 +1,45 @@
 <VirtualHost *:80>
-  DocumentRoot /var/www/
-  ErrorDocument 404 /404.html
+        DocumentRoot /var/www/
+        ErrorDocument 404 /404.html
 
-  <Location />
-      Deny from all
-      AuthUserFile /usr/local/etc/httpd/users
-      AuthName authorization
-      AuthType Basic
-      Satisfy Any
-      require valid-user
-  </Location>
+        ProxyRequests Off
+        ProxyPreserveHost Off
 
-  ProxyRequests Off
-  ProxyPreserveHost Off
+        ProxyPass               /search  http://localhost:9008/search
+        ProxyPassReverse        /search  http://localhost:9008/search
 
-  ProxyPass           /admin   http://localhost:9008/admin
-  ProxyPassReverse    /admin   http://localhost:9008/admin
+        ProxyPass               /api  http://localhost:9008
+        ProxyPassReverse        /api  http://localhost:9008
+</VirtualHost>
+<VirtualHost *:443>
+        DocumentRoot /var/www/
+        ErrorDocument 404 /404.html
 
-  ProxyPass           /search  http://localhost:9008/search
-  ProxyPassReverse    /search  http://localhost:9008/search
+        SSLEngine on
+        SSLProtocol all
+        SSLCertificateFile /usr/local/ssl/crt/public.crt
+        SSLCertificateKeyFile /usr/local/ssl/private/dfid.key
+        SSLCACertificateFile /usr/local/ssl/crt/intermediate.crt
 
-  ProxyPass           /api     http://localhost:9008
-  ProxyPassReverse    /api     http://localhost:9008
+
+        <Location /admin>
+            Order allow,deny
+            Allow from 193.195.13.5 194.201.210.196 193.128.74.82 82.29.235.19 81.130.194.129
+            Satisfy All
+        </Location>
+
+        ProxyRequests Off
+        ProxyPreserveHost Off
+
+        ProxyPass               /admin  http://localhost:9008/admin
+        ProxyPassReverse        /admin  http://localhost:9008/admin
+
+        ProxyPass               /search  http://localhost:9008/search
+        ProxyPassReverse        /search  http://localhost:9008/search
+
+        ProxyPass               /api  http://localhost:9008
+        ProxyPassReverse        /api  http://localhost:9008
+
+        ProxyPass               /build http://localhost:8080
+        ProxyPassReverse        /build http://localhost:8080
 </VirtualHost>
