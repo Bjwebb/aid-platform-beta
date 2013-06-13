@@ -32,8 +32,10 @@ public class Loader {
 
         // --------------------------------------------------------------------
         // we cannot guarantee the quality of these IATI sources so we need
-        // to tell the loader to skip corrupt ones
+        // to tell the loader to skip corrupt ones.  We also simply want to load
+        // everything in the folder not just the default .xml files.
         new Set(Prop.SKIPCORRUPT, true).execute(context);
+        new Set(Prop.CREATEFILTER, "*").execute(context);
 
         // --------------------------------------------------------------------
         // create the organistaion and activities database from the XML folder

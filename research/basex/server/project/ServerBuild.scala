@@ -2,7 +2,7 @@ import sbt._
 import sbt.Keys._
 
 object BaseXServerBuild extends Build {
-  lazy val basexloader = Project("basex-server", file(".")).settings(
+  lazy val basexloader = Project("server", file(".")).settings(
     resolvers ++= Seq(
       "BaseX Maven Repository" at "http://files.basex.org/maven",
       "XQL Maven Repository"   at "http://xqj.net/maven"
