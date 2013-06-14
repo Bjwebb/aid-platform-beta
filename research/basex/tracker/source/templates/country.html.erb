@@ -3,12 +3,28 @@
 
 <h1><%= country_code %></h1>
 
+<h2>Country Budget for Current FY</h2>
+<%= api.country_budget(country_code) %>
+
+<h2>Project Budgets by Year</h2>
 <table>
   <tbody>
     <% api.project_budgets_by_year(country_code).xpath('//data/financial-year').each do |fy| %>
       <tr>
         <td><%= fy.attr('label') %></td>
         <td><%= fy.content       %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h2>Sector Groups</h2>
+<table>
+  <tbody>
+    <% api.sector_groups(country_code).each do |sector, budget| %>
+      <tr>
+        <td><%= sector %></td>
+        <td><%= budget %></td>
       </tr>
     <% end %>
   </tbody>

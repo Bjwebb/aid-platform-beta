@@ -5,14 +5,24 @@ let $country_budget := sum($db//iati-activity[recipient-country/@code=$country_c
 let $sectors        := for $activity in $db//iati-activity[recipient-country/@code=$country_code][reporting-org/@ref='GB-1'][@hierarchy=2]
                        let $budget  := sum($activity/budget/value/text())
                        return for $sector in $activity/sector
-                               let $percent              := ($sector/@percentage, 100)[1]
-                               let $pct_of_budget        := ($budget idiv 100) * $percent
-                               let $pct_of_country_budget := (($pct_of_budget) div $country_budget) * 100
-                               return <sector code="{ $sector/@code }">{ $pct_of_country_budget }</sector>
-for $sector in $sectors
-let $code := $sector/@code
-group by $code
-order by sum($sector) descending
-return <sector code='{ $code }'>{ sum($sector) }</sector>           
+                              let $percent               := ($sector/@percentage, 100)[1]
+                              let $pct_of_budget         := ($budget idiv 100) * $percent
+                              let $pct_of_country_budget := (($pct_of_budget) div $country_budget) * 100
+                              return <sector code="{ $sector/@code }">
+                                { $pct_of_country_budget }
+                              </sector>
+return <results>
+  <data>
+  {
+    for $sector in $sectors
+    let $code := $sector/@code
+    group by $code
+    order by sum($sector) descending
+    return <sector code='{ $code }'>
+      { sum($sector) }
+    </sector>  
+  } 
+  </data>
+</results>        
                            
                                    
