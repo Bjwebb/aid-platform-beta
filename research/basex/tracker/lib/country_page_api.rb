@@ -1,5 +1,6 @@
 require 'lib/client'
 require 'nokogiri'
+require "benchmark"
 
 # Module provides mixin support for accessing BaseX
 module BaseXSupport
