@@ -2,7 +2,7 @@ require 'nokogiri'
 require 'open-uri'
 require 'date'
 
-class CountryPageApi 
+class CountryPageApi
 
   # retrieves the project budgets by year data from the service
   # in the format expected for drawing the graphs
@@ -12,8 +12,8 @@ class CountryPageApi
     doc = Nokogiri::XML(open("http://iati-datastore.herokuapp.com/api/1/access/activity.xml?reporting-org=GB-1&recipient-country=#{country_code}"))
 
     # extract the budgets and sort by year
-    budgets = doc.xpath("//budget").sort_by { |b| 
-      b.xpath("period-start/@iso-date").first.content 
+    budgets = doc.xpath("//budget").sort_by { |b|
+      b.xpath("period-start/@iso-date").first.content
     }
 
     # convert the budgets to FY
@@ -35,16 +35,24 @@ class CountryPageApi
 
       fy = "FY#{fy_start_year}/#{fy_end_year}"
       [fy, value]
-    }.group_by { |fy, budget| fy }.map { |fy,budgets| 
+    }.group_by { |fy, budget| fy }.map { |fy,budgets|
       fy_budget = budgets.map{ |budget| budget.last.to_i  }.inject(:+)
       [fy, fy_budget]
     }
-    
+
     Hash[*groups.flatten]
   end
 
   def sector_groups(country_code)
+    total_budget = country_budget(country_code)
+    doc          = Nokogiri::XML(open("http://iati-datastore.herokuapp.com/api/1/access/activity.xml?reporting-org=GB-1&recipient-country=#{country_code}"))
 
+    doc.group_by { |activity|
+      # get the hierarchy of the activity
+      hierarchy = doc.xpath('@hierarchy').first.content.to_i || 1
+
+      if(
+    }
   end
 
   def country_budget(country_code)
