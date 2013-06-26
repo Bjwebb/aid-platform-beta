@@ -9,13 +9,14 @@ object ApplicationBuild extends Build {
 
   val appDependencies = Seq(
     "joda-time" % "joda-time" % "2.2",
-    jdbc,
-    anorm
+    "org.basex" % "basex"     % "7.6"
   )
 
-
   val main = play.Project(appName, appVersion, appDependencies).settings(
-    // Add your own project settings here
+    resolvers ++= Seq(
+      "BaseX Maven Repository" at "http://files.basex.org/maven",
+      "XQL Maven Repository"   at "http://xqj.net/maven"
+    )
   )
 
 }
