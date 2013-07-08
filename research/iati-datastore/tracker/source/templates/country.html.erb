@@ -1,0 +1,19 @@
+---
+---
+
+<h1><%= country_code %></h1>
+
+<h2>Country Budget for Current FY</h2>
+<%= api.country_budget(country_code) %>
+
+<h2>Project Budgets by Year</h2>
+<table>
+  <tbody>
+    <% api.project_budgets_by_year(country_code).each do |fy, value| %>
+      <tr>
+        <td><%= fy    %></td>
+        <td><%= value %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
