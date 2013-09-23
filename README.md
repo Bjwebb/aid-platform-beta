@@ -31,4 +31,6 @@ The current architecture contains the following elements:
 
 ## <a id="setup-notes"></a> Setup Notes
 
-See [Setting up a Development Environment](https://github.com/DFID/aid-platform-beta/wiki/Setting-up-a-Development-Environment)
+All the setup instructions and how-to guides are in the [Wiki](wiki).
+
+See [Setting up a Development Environment](wiki/Setting-up-a-Development-Environment)
