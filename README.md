@@ -1,6 +1,6 @@
 # Development Tracker
 
-The Development Tracker allows you to find and explore detailed information on international development projects funded by the UK Government. The Development Tracker is owned and managed by the [Department for International Development (DFID)](www.gov.uk/dfid).
+The Development Tracker allows you to find and explore detailed information on international development projects funded by the UK Government. The Development Tracker is managed by the [Department for International Development (DFID)](https://www.gov.uk/dfid).
 
 The tracker is built using open data published by UK Government and partners, using the [International Aid Transparency Initiative (IATI) standard](http://iatistandard.org). The IATI standard is an international standard for international development data and allows ready comparison of information from different donors.
 
