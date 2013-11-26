@@ -35,13 +35,15 @@
 
     <%= stylesheet_link_tag "foundation", "aip-styles", "graph-styles", "main" %>
 
-   <script>  
-    jQuery(function(){
-         jQuery('#moreinfolink').click(function(){
+    <script>  
+    
+       jQuery(function(){
+         jQuery('.more-info-link').click( function(){
              jQuery('#moreinfo'+$(this).attr('target')).toggle();
-        }); 
-    });  
-    </script>
+          }); 
+        });  
+
+   </script>
 
 
   </head>

@@ -218,7 +218,53 @@ ul.legend-list li div span{
   font-size:bigger;
 }
 
-/* Ross test css */
+/* CSS to control the information boxes */
+
+.more-info  {
+  display: none; 
+}
+
+.more-info-content {
+  background: #f8f8f8;
+ /*  top: 1em; */
+  position: absolute; 
+  margin: 15px 15px 0 0;
+  padding: 0.6em; 
+  right: 0;
+  width: 80%;
+  z-index: 101;
+  list-style: none;
+  background: #f8f8f8;
+  border: 3px solid #097f96;
+  box-sizing: border-box;
+  zoom: 1;
+ /* font-size: 160%; */
+  line-height: 1.5;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  font-family: "nta", Arial, sans-serif;
+}
+
+.more-info-container{
+  margin: 15px 0px 15px 0px; 
+}
+
+.more-info-title
+{
+  font-size: 27px;
+  font-weight: bold;  
+}
+
+.more-info-link{
+  float:right;  
+  cursor:pointer;
+}
+
+.move-up-25{
+  margin-top:-25px;
+}
+
+/*More Information CSS for landing page*/
 
 .top-five-header{
     margin-bottom: 14px;
@@ -237,37 +283,21 @@ ul.legend-list li div span{
   -webkit-font-smoothing: antialiased;
 }
 
-.more-info-lnk{
-  float:right;  
-  margin-left: 20; 
+/*More Information CSS for Project Page*/
+
+.more-info-link-country-title{
+  margin-left:15px;  
+  margin-top: -5px;
+  cursor:pointer;
 }
 
-.more-info-lnk span:hover {
-  cursor:hand;
-} 
-
-
-.more-info{
-  display: none; 
+.project-country-title{
+  float:left;
+  font-size: 1.25em;
+  margin-bottom: 20px;
 }
 
-.more-info ul {
-  background: #f8f8f8;
-  top: 1em;
-  position: absolute;
-  margin: -0.2em 0 0 0;
-  padding: 0.6em;
-  right: 0;
-  width: 80%;
-  z-index: 101;
-  list-style: none;
-  background: #f8f8f8;
-  border: 3px solid #097f96;
-  box-sizing: border-box;
-  zoom: 1;
-  font-size: 160%;
-  line-height: 1.5;
-  font-weight: 400;
-  -webkit-font-smoothing: antialiased;
-  font-family: "nta", Arial, sans-serif;
+.move-message-box{
+  margin-top:-35px;
+  margin-right:90px;
 }
